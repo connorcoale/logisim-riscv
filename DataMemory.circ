@@ -81,8 +81,8 @@
     <a name="appearance" val="classic"/>
     <appear>
       <circ-anchor facing="east" height="6" width="6" x="137" y="87"/>
-      <circ-port height="10" pin="770,230" width="10" x="135" y="85"/>
-      <circ-port height="8" pin="180,190" width="8" x="46" y="66"/>
+      <circ-port height="10" pin="620,410" width="10" x="135" y="85"/>
+      <circ-port height="8" pin="210,300" width="8" x="46" y="66"/>
       <circ-port height="8" pin="210,340" width="8" x="46" y="106"/>
       <circ-port height="8" pin="230,370" width="8" x="66" y="146"/>
       <circ-port height="8" pin="240,410" width="8" x="46" y="126"/>
@@ -96,7 +96,7 @@
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="84" y="109">byte writes</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="94" y="50">DATA MEM</text>
     </appear>
-    <comp lib="1" loc="(180,190)" name="Pin">
+    <comp lib="1" loc="(210,300)" name="Pin">
       <a name="label" val="address"/>
       <a name="width" val="32"/>
     </comp>
@@ -107,10 +107,6 @@
     <comp lib="1" loc="(230,370)" name="Pin">
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="1" loc="(240,150)" name="Constant">
-      <a name="value" val="0x0"/>
-      <a name="width" val="2"/>
-    </comp>
     <comp lib="1" loc="(240,320)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
@@ -118,7 +114,6 @@
       <a name="label" val="data in"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(280,60)" name="Probe"/>
     <comp lib="1" loc="(300,340)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="fanout" val="5"/>
@@ -197,70 +192,27 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="32"/>
     </comp>
-    <comp lib="1" loc="(660,110)" name="Constant">
-      <a name="value" val="0x4000"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="1" loc="(770,230)" name="Pin">
+    <comp lib="1" loc="(620,410)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="data out"/>
       <a name="labelloc" val="east"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="3" loc="(250,130)" name="BitSelector">
-      <a name="group" val="10"/>
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="3" loc="(250,300)" name="BitSelector">
       <a name="group" val="24"/>
       <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(740,230)" name="Multiplexer">
-      <a name="enable" val="false"/>
-      <a name="selloc" val="tr"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(700,100)" name="Comparator">
-      <a name="mode" val="unsigned"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="5" loc="(320,120)" name="ROM">
-      <a name="addrWidth" val="10"/>
-      <a name="contents">addr/data: 10 32
-ffffffff
-</a>
-      <a name="dataWidth" val="32"/>
     </comp>
     <comp lib="5" loc="(320,290)" name="RAM">
       <a name="addrWidth" val="24"/>
       <a name="line" val="quad"/>
     </comp>
-    <wire from="(180,190)" to="(190,190)"/>
-    <wire from="(190,130)" to="(190,190)"/>
-    <wire from="(190,130)" to="(220,130)"/>
-    <wire from="(190,190)" to="(190,300)"/>
-    <wire from="(190,300)" to="(220,300)"/>
-    <wire from="(190,90)" to="(190,130)"/>
-    <wire from="(190,90)" to="(660,90)"/>
+    <wire from="(210,300)" to="(220,300)"/>
     <wire from="(210,340)" to="(300,340)"/>
     <wire from="(230,370)" to="(320,370)"/>
-    <wire from="(240,140)" to="(240,150)"/>
     <wire from="(240,310)" to="(240,320)"/>
     <wire from="(240,410)" to="(300,410)"/>
-    <wire from="(250,130)" to="(290,130)"/>
     <wire from="(250,300)" to="(320,300)"/>
-    <wire from="(280,60)" to="(290,60)"/>
-    <wire from="(290,130)" to="(320,130)"/>
-    <wire from="(290,60)" to="(290,130)"/>
-    <wire from="(560,180)" to="(700,180)"/>
-    <wire from="(580,410)" to="(610,410)"/>
-    <wire from="(610,220)" to="(610,410)"/>
-    <wire from="(610,220)" to="(710,220)"/>
-    <wire from="(700,110)" to="(720,110)"/>
-    <wire from="(700,180)" to="(700,240)"/>
-    <wire from="(700,240)" to="(710,240)"/>
-    <wire from="(720,110)" to="(720,210)"/>
-    <wire from="(740,230)" to="(770,230)"/>
+    <wire from="(580,410)" to="(620,410)"/>
   </circuit>
 </project>
