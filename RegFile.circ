@@ -71,7 +71,6 @@
     <sep/>
     <tool lib="1" name="Pin">
       <a name="label" val="sel rs1"/>
-      <a name="width" val="5"/>
     </tool>
     <tool lib="1" name="Pin">
       <a name="facing" val="west"/>
@@ -88,14 +87,16 @@
     <tool lib="2" name="NOR Gate"/>
   </toolbar>
   <circuit name="main">
-    <a name="appearance" val="classic"/>
+    <a name="appearance" val="custom"/>
     <appear>
       <circ-anchor facing="east" height="6" width="6" x="167" y="37"/>
       <circ-port height="10" pin="1160,390" width="10" x="285" y="105"/>
       <circ-port height="10" pin="1160,730" width="10" x="285" y="125"/>
       <circ-port height="8" pin="1160,550" width="8" x="36" y="106"/>
       <circ-port height="8" pin="1160,570" width="8" x="36" y="126"/>
+      <circ-port height="8" pin="490,410" width="8" x="46" y="236"/>
       <circ-port height="8" pin="490,430" width="8" x="36" y="66"/>
+      <circ-port height="8" pin="510,370" width="8" x="106" y="236"/>
       <circ-port height="8" pin="520,480" width="8" x="36" y="46"/>
       <circ-port height="8" pin="520,510" width="8" x="76" y="236"/>
       <polyline fill="none" points="70,240 80,230" stroke="#000000" stroke-width="2"/>
@@ -103,14 +104,18 @@
       <rect fill="none" height="0" stroke="#000000" stroke-width="2" width="40" x="210" y="40"/>
       <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="30" x="260" y="100"/>
       <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="30" x="260" y="120"/>
+      <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="30" x="40" y="220"/>
       <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="30" x="40" y="40"/>
       <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="30" x="40" y="60"/>
+      <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="30" x="90" y="220"/>
       <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="40" x="40" y="100"/>
       <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="40" x="40" y="120"/>
       <rect fill="none" height="200" stroke="#000000" stroke-width="2" width="250" x="40" y="40"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="104" y="229">rst</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="274" y="109">rs1</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="274" y="129">rs2</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="53" y="69">rd</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="54" y="229">write</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="58" y="49">data</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="60" y="129">sel rs2</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="61" y="109">sel rs1</text>
@@ -152,11 +157,11 @@
       <visible-register height="10" path="/Register(490,890)" stroke-width="0" width="53" x="110" y="140"/>
       <visible-register height="10" path="/Register(520,1250)" stroke-width="0" width="53" x="170" y="70"/>
       <visible-register height="10" path="/Register(520,1570)" stroke-width="0" width="53" x="170" y="150"/>
-      <visible-register height="10" path="/Register(520,610)" stroke-width="0" width="53" x="110" y="80"/>
+      <visible-register height="10" path="/Register(520,610)" stroke-width="0" width="53" x="110" y="70"/>
       <visible-register height="10" path="/Register(520,930)" stroke-width="0" width="53" x="110" y="150"/>
       <visible-register height="10" path="/Register(550,1290)" stroke-width="0" width="53" x="170" y="80"/>
       <visible-register height="10" path="/Register(550,1610)" stroke-width="0" width="53" x="170" y="160"/>
-      <visible-register height="10" path="/Register(550,650)" stroke-width="0" width="53" x="110" y="70"/>
+      <visible-register height="10" path="/Register(550,650)" stroke-width="0" width="53" x="110" y="80"/>
       <visible-register height="10" path="/Register(550,970)" stroke-width="0" width="53" x="110" y="160"/>
       <visible-register height="10" path="/Register(580,1010)" stroke-width="0" width="53" x="110" y="170"/>
       <visible-register height="10" path="/Register(580,1330)" stroke-width="0" width="53" x="170" y="90"/>
@@ -234,6 +239,23 @@
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
     </comp>
+    <comp lib="1" loc="(480,1230)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(480,1550)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(480,910)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(490,410)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="write"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="1" loc="(490,430)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="rd"/>
@@ -255,6 +277,28 @@
     <comp lib="1" loc="(500,950)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
+    </comp>
+    <comp lib="1" loc="(510,1270)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(510,1590)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(510,370)" name="Pin">
+      <a name="label" val="rst"/>
+    </comp>
+    <comp lib="1" loc="(510,370)" name="Tunnel">
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(510,630)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(510,950)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
     </comp>
     <comp lib="1" loc="(520,480)" name="Pin">
       <a name="label" val="data"/>
@@ -287,6 +331,22 @@
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
     </comp>
+    <comp lib="1" loc="(540,1310)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(540,1630)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(540,670)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(540,990)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
     <comp lib="1" loc="(560,1030)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
@@ -302,6 +362,22 @@
     <comp lib="1" loc="(560,710)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
+    </comp>
+    <comp lib="1" loc="(570,1030)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(570,1350)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(570,1670)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(570,710)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
     </comp>
     <comp lib="1" loc="(590,1070)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -319,6 +395,22 @@
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
     </comp>
+    <comp lib="1" loc="(600,1070)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(600,1390)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(600,1710)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(600,750)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
     <comp lib="1" loc="(620,1110)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
@@ -334,6 +426,22 @@
     <comp lib="1" loc="(620,790)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
+    </comp>
+    <comp lib="1" loc="(630,1110)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(630,1430)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(630,1750)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(630,790)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
     </comp>
     <comp lib="1" loc="(650,1150)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -351,6 +459,22 @@
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
     </comp>
+    <comp lib="1" loc="(660,1150)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(660,1470)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(660,1790)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(660,830)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
     <comp lib="1" loc="(680,1190)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
@@ -366,6 +490,22 @@
     <comp lib="1" loc="(680,870)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="c"/>
+    </comp>
+    <comp lib="1" loc="(690,1190)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(690,1510)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(690,1830)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp lib="1" loc="(690,870)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="r"/>
     </comp>
     <comp lib="3" loc="(1140,390)" name="Multiplexer">
       <a name="enable" val="false"/>
@@ -664,6 +804,8 @@
     <wire from="(420,450)" to="(420,1780)"/>
     <wire from="(430,1820)" to="(670,1820)"/>
     <wire from="(430,450)" to="(430,1820)"/>
+    <wire from="(440,410)" to="(440,420)"/>
+    <wire from="(440,410)" to="(490,410)"/>
     <wire from="(440,430)" to="(490,430)"/>
     <wire from="(450,1010)" to="(450,1050)"/>
     <wire from="(450,1010)" to="(550,1010)"/>
@@ -920,5 +1062,48 @@
     <wire from="(990,490)" to="(990,830)"/>
     <wire from="(990,830)" to="(1100,830)"/>
     <wire from="(990,830)" to="(990,1610)"/>
+  </circuit>
+  <circuit name="testing">
+    <comp lib="1" loc="(230,160)" name="Pin">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="1" loc="(290,220)" name="Pin">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="1" loc="(290,240)" name="Pin">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="1" loc="(330,180)" name="Pin">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="1" loc="(360,390)" name="Pin">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(390,390)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(420,410)" name="Pin">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(690,190)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(700,300)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp loc="(480,150)" name="main"/>
+    <wire from="(230,160)" to="(350,160)"/>
+    <wire from="(290,220)" to="(350,220)"/>
+    <wire from="(290,240)" to="(350,240)"/>
+    <wire from="(330,180)" to="(350,180)"/>
+    <wire from="(360,350)" to="(360,390)"/>
+    <wire from="(390,350)" to="(390,390)"/>
+    <wire from="(420,350)" to="(420,410)"/>
+    <wire from="(600,220)" to="(620,220)"/>
+    <wire from="(600,240)" to="(620,240)"/>
+    <wire from="(620,190)" to="(620,220)"/>
+    <wire from="(620,190)" to="(690,190)"/>
+    <wire from="(620,240)" to="(620,300)"/>
+    <wire from="(620,300)" to="(700,300)"/>
   </circuit>
 </project>
