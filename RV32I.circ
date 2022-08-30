@@ -129,7 +129,7 @@ are 32bits exactly)</a>
       <a name="label" val="rst"/>
     </comp>
     <comp lib="1" loc="(1020,610)" name="Constant">
-      <a name="value" val="0x11"/>
+      <a name="value" val="0x3"/>
       <a name="width" val="7"/>
     </comp>
     <comp lib="1" loc="(1040,660)" name="Constant">

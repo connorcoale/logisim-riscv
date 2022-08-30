@@ -32,7 +32,7 @@ addi x12, x0, 0
 addi x13, x0, 0
 
 # ================================
-# test R type
+# test I type
 addi x1, x0, 0xff     # x1= 0x00ff
 xori x2, x1, 0x77     # x2= 0x0088
 ori x3, x2, 0x77      # x3= 0x00ff
@@ -43,3 +43,25 @@ srai x7, x1, 0x1      # x7= 0x007f
 slti x8, x1, 0x0      # x8= 0x0000
 slti x9, x1, 0x1ff    # x9= 0x0001
 # sltiu
+# ================================
+# reset everything
+addi x1, x0, 0
+addi x2, x0, 0
+addi x3, x0, 0
+addi x4, x0, 0
+addi x5, x0, 0
+addi x6, x0, 0
+addi x7, x0, 0
+addi x8, x0, 0
+addi x9, x0, 0
+# ================================
+# test S and loading I type
+addi x1, x1, -1  # x1  =0xffffffff
+sw x1, 0x4(x0)   #(x4) =0xffffffff
+lw x2, 0x4(x0)   # x2  =0xffffffff
+sb x1, 0x8(x0)   #(x8) =0x000000ff
+lb x3, 0x8(x0)   # x3  =0xffffffff
+sh x1, 0xc(x0)   #(x12)=0x0000ffff
+lh x4, 0xc(x0)   # x4  =0xffffffff
+lbu x5, 0x4(x0)  # x5  =0x000000ff
+lhu x6, 0x4(x0)  # x6  =0x0000ffff
