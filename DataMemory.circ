@@ -196,6 +196,7 @@
       <a name="facing" val="west"/>
       <a name="label" val="data out"/>
       <a name="labelloc" val="east"/>
+      <a name="radix" val="16"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
