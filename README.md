@@ -14,4 +14,4 @@ I followed the RV32I specifications seen [here](https://riscv.org/wp-content/upl
 Maybe this means I implemented RV32E... oh well.
 
 ## Top Level
-~[RV32I_TopLevel](/assets/RV32I_TopLevel.png)
+![RV32I TopLevel](/assets/RV32I_TopLevel.png)
